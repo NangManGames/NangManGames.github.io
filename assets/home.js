@@ -253,6 +253,18 @@
     talk.addEventListener("click", () => talk.classList.contains("typing") && done());
   }
 
+  // 말 상자의 해가 가끔 윙크한다
+  const face = document.querySelector(".talk .face");
+  if (face && face.dataset.wink && !still) {
+    const calm = face.src, wink = new Image();
+    wink.src = face.dataset.wink;
+    const later = () => setTimeout(() => {
+      face.src = wink.src;
+      setTimeout(() => { face.src = calm; later(); }, 700);
+    }, rnd(3000, 8000));
+    later();
+  }
+
   // ── 4. Dock 7 칸 위의 고양이 ────────────────────────────────────────
   const perch = document.querySelector(".perch"), cat = perch && perch.querySelector(".cat");
   if (cat && NG.cat) {

@@ -25,12 +25,15 @@
 .studio-hero.lost .slogo { width: min(280px, 60vw) }
 .studio-hero.lost a { color: var(--orange) }
 
-/* 칸 머리: 작은 해 + 해의 세 빛 줄 */
+/* 칸 머리: Dock 7의 작은 그림 + 해의 세 빛 줄 */
 .head { border-bottom: 0; padding-bottom: 12px; position: relative }
 .head::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 4px;
   background: linear-gradient(90deg, var(--sun) 0 24px, var(--orange) 24px 48px, var(--pink) 48px 72px, var(--line) 72px) }
 .head h2 { display: flex; align-items: center; gap: 10px; font-size: 17px }
-.head h2::before { content: ""; width: 24px; height: 24px; background: url(../img/mark.png) center/contain no-repeat; image-rendering: pixelated }
+.head h2::before { content: ""; width: 26px; height: 26px; background: center no-repeat; image-rendering: pixelated }
+#games .head h2::before { background-image: url(../img/head_games.png) }
+#studio .head h2::before { background-image: url(../img/head_studio.png) }
+#contact .head h2::before { background-image: url(../img/head_contact.png) }
 
 /* 게임 칸: 픽셀 계단 테두리 */
 .game { --frame: var(--line2); display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 32px; align-items: center;
@@ -90,7 +93,7 @@
   .btns.left { margin-top: 12px }
   .strip { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px }
   .talk { grid-template-columns: minmax(0, 1fr); gap: 12px; padding: 20px 18px 30px }
-  .talk .face { width: 64px; height: 64px; padding: 6px }
+  .talk .face { width: 76px; height: 76px; padding: 4px }  /* 해 그림(68px)을 줄이지 않는 크기 */
 }
 @media (prefers-reduced-motion: reduce) {
   .caret, .talk .next { animation: none }

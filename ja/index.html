@@ -34,14 +34,19 @@
 </nav>
 
 <header id="top" class="studio-hero">
-  <img class="slogo" src="../img/logo_dark.png" alt="낭만게임즈 NangmanGames" width="908" height="640">
-  <p class="lead">韓国のひとりゲームスタジオです。</p>
+  <canvas class="night" aria-hidden="true"></canvas>
+  <div class="slogo">
+    <button class="sun" type="button" aria-label="日を沈める" aria-pressed="false"><img src="../img/logo_sun.png" alt="" width="908" height="362"></button>
+    <h1><img class="word" src="../img/logo_word.png" alt="낭만게임즈 NangmanGames" width="908" height="278"></h1>
+  </div>
+  <p class="lead">ロマンこそ、人生のすべて。<span class="caret" aria-hidden="true"></span></p>
 </header>
 
 <main>
   <section id="games">
     <div class="head"><h2>ゲーム</h2></div>
-    <article class="game">
+    <div class="perch"><button class="cat" type="button" aria-label="ねこをなでる"></button></div>
+    <article class="game feature" style="--art: url('/img/dock7_keyart.jpg')">
       <a class="cover" href="/dock7/"><video src="../video/dock7_cut.webm" poster="../img/dock7_cut.jpg" autoplay muted loop playsinline aria-label="Dock 7"></video></a>
       <div class="info">
         <img class="glogo" src="../img/dock7_logo.png" alt="Dock 7" width="1280" height="420">
@@ -49,9 +54,10 @@
         <p class="tag">体験版 2026年12月 · 早期アクセス 2027年1〜3月</p>
         <p class="btns left"><a class="btn main" href="https://store.steampowered.com/app/5425000/Dock_7/?utm_source=nangmangames&amp;utm_content=ja">Steamでウィッシュリストに追加</a><a class="btn" href="/dock7/">プレスキット(英語)</a></p>
       </div>
+      <div class="strip"><a href="/dock7/"><img src="../img/shots/en/16_inside_english.jpg" alt="With the hull peeled back, every room has a little note to read." title="With the hull peeled back, every room has a little note to read." loading="lazy" width="640" height="360"></a><a href="/dock7/"><img src="../img/shots/en/05_keel_english.jpg" alt="Plates cut all the way around come loose and drift off." title="Plates cut all the way around come loose and drift off." loading="lazy" width="640" height="360"></a><a href="/dock7/"><img src="../img/shots/en/15_net_full_english.jpg" alt="The Tow Net swells with everything you put in it." title="The Tow Net swells with everything you put in it." loading="lazy" width="640" height="360"></a><a href="/dock7/"><img src="../img/shots/en/17_scanned_english.jpg" alt="The Scanner shows the frame under the hull plating." title="The Scanner shows the frame under the hull plating." loading="lazy" width="640" height="360"></a></div>
     </article>
     <article class="game small">
-      <a class="cover" href="https://store.steampowered.com/app/5189050/Robots_To_Scrap/?utm_source=nangmangames&amp;utm_content=ja"><img src="../img/robots_to_scrap_header.jpg" alt="Robots To Scrap" loading="lazy"></a>
+      <a class="cover wip" data-tape="開発中" href="https://store.steampowered.com/app/5189050/Robots_To_Scrap/?utm_source=nangmangames&amp;utm_content=ja"><img src="../img/robots_to_scrap_header.jpg" alt="Robots To Scrap" loading="lazy"></a>
       <div class="info">
         <p class="tag">開発中</p>
         <h3>Robots To Scrap</h3>
@@ -63,13 +69,18 @@
 
   <section id="studio">
     <div class="head"><h2>スタジオ</h2></div>
-    <div class="dev"><p>NangmanGamesは、韓国でひとりでゲームを作っているスタジオです。長いあいだ頭の中に妄想ばかりためこんで、何ひとつ仕上げられない「アイデアマン」でしたが、最近はその妄想をひとつずつ取り出して、実際に組み立てています。</p><p>Dock 7は、そうして組み立てたものが集まった場所です。月をめぐるステーション、誰も迎えに来なかった船、夜につけっぱなしのラジオ、そして誰かが置いていった物たち。</p><p class="note">ナンマン(낭만)は、あたたかくて少しせつない「ロマン」を表す韓国語です。</p></div>
+    <div class="talk">
+      <img class="face" src="../img/mark.png" alt="" width="64" height="64">
+      <div class="dev"><p class="who">NangmanGames</p><p>NangmanGamesは、韓国でひとりでゲームを作っているスタジオです。長いあいだ頭の中に妄想ばかりためこんで、何ひとつ仕上げられない「アイデアマン」でしたが、最近はその妄想をひとつずつ取り出して、実際に組み立てています。</p><p>Dock 7は、そうして組み立てたものが集まった場所です。月をめぐるステーション、誰も迎えに来なかった船、夜につけっぱなしのラジオ、そして誰かが置いていった物たち。</p><p class="note">ナンマン(낭만)は、あたたかくて少しせつない「ロマン」を表す韓国語です。</p></div>
+      <span class="next" aria-hidden="true"></span>
+    </div>
   </section>
 
   <section id="contact">
     <div class="head"><h2>連絡先</h2></div>
     <div class="card mailcard">
       <a class="mail" href="mailto:nangmanindie@gmail.com">nangmanindie@gmail.com</a>
+      <button class="copy mailcopy" type="button" data-copy="nangmanindie@gmail.com">コピー</button>
       <p class="muted">メディア、配信者の方、ご質問など、いつでもお気軽にメールください。</p>
       <div class="sl"><a href="https://store.steampowered.com/app/5425000/Dock_7/">Steam</a><a href="https://x.com/NangManGames">X</a><a href="https://www.youtube.com/@NangManGames">YouTube</a><a href="https://www.tiktok.com/@nangmangames">TikTok</a></div>
     </div>
@@ -79,6 +90,8 @@
 <footer>
   <p>© 2026 NangmanGames (낭만게임즈)</p>
 </footer>
+<script>window.NG = {"wish": "流れ星をつかまえた！願いごとはこちら:", "wishGo": "Dock 7をウィッシュリストに", "wishUrl": "https://store.steampowered.com/app/5425000/Dock_7/?utm_source=nangmangames&utm_content=ja&utm_campaign=star", "laser": "レーザー ON · Escで終了", "scrap": "スクラップ", "away": "日が沈みました…", "cat": {"Sit": 0, "Blink": 1, "Tail": 2, "WalkA": 3, "WalkB": 4, "ScratchA": 5, "ScratchB": 6, "EatA": 7, "EatB": 8, "Sleep": 9, "Climb": 10, "Groom": 11, "Yawn": 12, "Loaf": 13, "Belly": 14}, "copied": "コピーしました", "cont": "コンティニュー？", "top": "トップへ", "thanks": "遊んでくれてありがとう。"};</script>
+<script src="../assets/home.js" defer></script>
 <script>
 // 움직임 줄이기를 켠 사람에게는 영상을 멈춘 첫 장면으로
 if (matchMedia("(prefers-reduced-motion: reduce)").matches)

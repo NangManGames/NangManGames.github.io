@@ -34,14 +34,19 @@
 </nav>
 
 <header id="top" class="studio-hero">
-  <img class="slogo" src="img/logo_dark.png" alt="낭만게임즈 NangmanGames" width="908" height="640">
-  <p class="lead">A one-person game studio in South Korea.</p>
+  <canvas class="night" aria-hidden="true"></canvas>
+  <div class="slogo">
+    <button class="sun" type="button" aria-label="Set the sun" aria-pressed="false"><img src="img/logo_sun.png" alt="" width="908" height="362"></button>
+    <h1><img class="word" src="img/logo_word.png" alt="낭만게임즈 NangmanGames" width="908" height="278"></h1>
+  </div>
+  <p class="lead">Nangman is everything.<span class="caret" aria-hidden="true"></span></p>
 </header>
 
 <main>
   <section id="games">
     <div class="head"><h2>Games</h2></div>
-    <article class="game">
+    <div class="perch"><button class="cat" type="button" aria-label="Pet the cat"></button></div>
+    <article class="game feature" style="--art: url('/img/dock7_keyart.jpg')">
       <a class="cover" href="/dock7/"><video src="video/dock7_cut.webm" poster="img/dock7_cut.jpg" autoplay muted loop playsinline aria-label="Dock 7"></video></a>
       <div class="info">
         <img class="glogo" src="img/dock7_logo.png" alt="Dock 7" width="1280" height="420">
@@ -49,9 +54,10 @@
         <p class="tag">Demo December 2026 · Early Access Q1 2027</p>
         <p class="btns left"><a class="btn main" href="https://store.steampowered.com/app/5425000/Dock_7/?utm_source=nangmangames&amp;utm_content=en">Wishlist on Steam</a><a class="btn" href="/dock7/">Press kit</a></p>
       </div>
+      <div class="strip"><a href="/dock7/"><img src="img/shots/en/16_inside_english.jpg" alt="With the hull peeled back, every room has a little note to read." title="With the hull peeled back, every room has a little note to read." loading="lazy" width="640" height="360"></a><a href="/dock7/"><img src="img/shots/en/05_keel_english.jpg" alt="Plates cut all the way around come loose and drift off." title="Plates cut all the way around come loose and drift off." loading="lazy" width="640" height="360"></a><a href="/dock7/"><img src="img/shots/en/15_net_full_english.jpg" alt="The Tow Net swells with everything you put in it." title="The Tow Net swells with everything you put in it." loading="lazy" width="640" height="360"></a><a href="/dock7/"><img src="img/shots/en/17_scanned_english.jpg" alt="The Scanner shows the frame under the hull plating." title="The Scanner shows the frame under the hull plating." loading="lazy" width="640" height="360"></a></div>
     </article>
     <article class="game small">
-      <a class="cover" href="https://store.steampowered.com/app/5189050/Robots_To_Scrap/?utm_source=nangmangames&amp;utm_content=en"><img src="img/robots_to_scrap_header.jpg" alt="Robots To Scrap" loading="lazy"></a>
+      <a class="cover wip" data-tape="In development" href="https://store.steampowered.com/app/5189050/Robots_To_Scrap/?utm_source=nangmangames&amp;utm_content=en"><img src="img/robots_to_scrap_header.jpg" alt="Robots To Scrap" loading="lazy"></a>
       <div class="info">
         <p class="tag">In development</p>
         <h3>Robots To Scrap</h3>
@@ -63,13 +69,18 @@
 
   <section id="studio">
     <div class="head"><h2>Studio</h2></div>
-    <div class="dev"><p>NangmanGames is a one-person studio in South Korea. For years I was the classic “ideas guy”, all daydreams and nothing finished. These days I’m pulling those daydreams out one at a time and actually putting them together.</p><p>Dock 7 is where they’ve ended up: a station circling the moon, ships nobody came back for, a radio left on at night, and the things people left behind.</p><p class="note">Nangman (낭만) is a Korean word for a warm, slightly wistful kind of romance.</p></div>
+    <div class="talk">
+      <img class="face" src="img/mark.png" alt="" width="64" height="64">
+      <div class="dev"><p class="who">NangmanGames</p><p>NangmanGames is a one-person studio in South Korea. For years I was the classic “ideas guy”, all daydreams and nothing finished. These days I’m pulling those daydreams out one at a time and actually putting them together.</p><p>Dock 7 is where they’ve ended up: a station circling the moon, ships nobody came back for, a radio left on at night, and the things people left behind.</p><p class="note">Nangman (낭만) is a Korean word for a warm, slightly wistful kind of romance.</p></div>
+      <span class="next" aria-hidden="true"></span>
+    </div>
   </section>
 
   <section id="contact">
     <div class="head"><h2>Contact</h2></div>
     <div class="card mailcard">
       <a class="mail" href="mailto:nangmanindie@gmail.com">nangmanindie@gmail.com</a>
+      <button class="copy mailcopy" type="button" data-copy="nangmanindie@gmail.com">Copy</button>
       <p class="muted">Press, creators, questions: write any time.</p>
       <div class="sl"><a href="https://store.steampowered.com/app/5425000/Dock_7/">Steam</a><a href="https://x.com/NangManGames">X</a><a href="https://www.youtube.com/@NangManGames">YouTube</a><a href="https://www.tiktok.com/@nangmangames">TikTok</a></div>
     </div>
@@ -79,6 +90,8 @@
 <footer>
   <p>© 2026 NangmanGames (낭만게임즈)</p>
 </footer>
+<script>window.NG = {"wish": "You caught a shooting star! Make a wish:", "wishGo": "Wishlist Dock 7", "wishUrl": "https://store.steampowered.com/app/5425000/Dock_7/?utm_source=nangmangames&utm_content=en&utm_campaign=star", "laser": "LASER ON · Esc to stop", "scrap": "SCRAP", "away": "The sun went down…", "cat": {"Sit": 0, "Blink": 1, "Tail": 2, "WalkA": 3, "WalkB": 4, "ScratchA": 5, "ScratchB": 6, "EatA": 7, "EatB": 8, "Sleep": 9, "Climb": 10, "Groom": 11, "Yawn": 12, "Loaf": 13, "Belly": 14}, "copied": "Copied!", "cont": "CONTINUE?", "top": "Back to the top", "thanks": "Thanks for playing."};</script>
+<script src="assets/home.js" defer></script>
 <script>
 // 움직임 줄이기를 켠 사람에게는 영상을 멈춘 첫 장면으로
 if (matchMedia("(prefers-reduced-motion: reduce)").matches)

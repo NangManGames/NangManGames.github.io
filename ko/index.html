@@ -34,14 +34,19 @@
 </nav>
 
 <header id="top" class="studio-hero">
-  <img class="slogo" src="../img/logo_dark.png" alt="낭만게임즈 NangmanGames" width="908" height="640">
-  <p class="lead">한국의 1인 게임 스튜디오입니다.</p>
+  <canvas class="night" aria-hidden="true"></canvas>
+  <div class="slogo">
+    <button class="sun" type="button" aria-label="해 지기" aria-pressed="false"><img src="../img/logo_sun.png" alt="" width="908" height="362"></button>
+    <h1><img class="word" src="../img/logo_word.png" alt="낭만게임즈 NangmanGames" width="908" height="278"></h1>
+  </div>
+  <p class="lead">낭만이 인생의 전부다.<span class="caret" aria-hidden="true"></span></p>
 </header>
 
 <main>
   <section id="games">
     <div class="head"><h2>게임</h2></div>
-    <article class="game">
+    <div class="perch"><button class="cat" type="button" aria-label="고양이 쓰다듬기"></button></div>
+    <article class="game feature" style="--art: url('/img/dock7_keyart.jpg')">
       <a class="cover" href="/dock7/ko/"><video src="../video/dock7_cut.webm" poster="../img/dock7_cut.jpg" autoplay muted loop playsinline aria-label="Dock 7"></video></a>
       <div class="info">
         <img class="glogo" src="../img/dock7_logo.png" alt="Dock 7" width="1280" height="420">
@@ -49,9 +54,10 @@
         <p class="tag">데모 2026년 12월 · 앞서 해보기 2027년 1분기</p>
         <p class="btns left"><a class="btn main" href="https://store.steampowered.com/app/5425000/Dock_7/?utm_source=nangmangames&amp;utm_content=ko">Steam 위시리스트에 담기</a><a class="btn" href="/dock7/ko/">프레스 킷</a></p>
       </div>
+      <div class="strip"><a href="/dock7/ko/"><img src="../img/shots/ko/screenshot_02.jpg" alt="떨어져 나간 판과 부품을 트랙터빔으로 끌어온다." title="떨어져 나간 판과 부품을 트랙터빔으로 끌어온다." loading="lazy" width="640" height="360"></a><a href="/dock7/ko/"><img src="../img/shots/ko/screenshot_03.jpg" alt="건진 상자를 인양함으로 실어 나르는 중." title="건진 상자를 인양함으로 실어 나르는 중." loading="lazy" width="640" height="360"></a><a href="/dock7/ko/"><img src="../img/shots/ko/screenshot_04.jpg" alt="아직 손대지 않은 큰 화물선 폐함." title="아직 손대지 않은 큰 화물선 폐함." loading="lazy" width="640" height="360"></a><a href="/dock7/ko/"><img src="../img/shots/ko/screenshot_05.jpg" alt="도크로 돌아오면 인양 정산서가 그날 건진 것을 셈한다." title="도크로 돌아오면 인양 정산서가 그날 건진 것을 셈한다." loading="lazy" width="640" height="360"></a></div>
     </article>
     <article class="game small">
-      <a class="cover" href="https://store.steampowered.com/app/5189050/Robots_To_Scrap/?utm_source=nangmangames&amp;utm_content=ko"><img src="../img/robots_to_scrap_header.jpg" alt="Robots To Scrap" loading="lazy"></a>
+      <a class="cover wip" data-tape="개발 중" href="https://store.steampowered.com/app/5189050/Robots_To_Scrap/?utm_source=nangmangames&amp;utm_content=ko"><img src="../img/robots_to_scrap_header.jpg" alt="Robots To Scrap" loading="lazy"></a>
       <div class="info">
         <p class="tag">개발 중</p>
         <h3>Robots To Scrap</h3>
@@ -63,13 +69,18 @@
 
   <section id="studio">
     <div class="head"><h2>스튜디오</h2></div>
-    <div class="dev"><p>NangmanGames는 한국에서 혼자 게임을 만드는 1인 스튜디오입니다. 오랫동안 머릿속에 망상만 잔뜩 쌓아 두던 ‘아이디어맨’이었는데, 요즘은 그 망상을 하나씩 꺼내 실제로 조립해 보고 있습니다.</p><p>Dock 7은 그렇게 조립한 것들이 모인 곳입니다. 달을 도는 정거장, 아무도 찾으러 오지 않은 배, 밤에 켜 두는 라디오, 그리고 누군가 두고 간 물건들이요.</p></div>
+    <div class="talk">
+      <img class="face" src="../img/mark.png" alt="" width="64" height="64">
+      <div class="dev"><p class="who">NangmanGames</p><p>NangmanGames는 한국에서 혼자 게임을 만드는 1인 스튜디오입니다. 오랫동안 머릿속에 망상만 잔뜩 쌓아 두던 ‘아이디어맨’이었는데, 요즘은 그 망상을 하나씩 꺼내 실제로 조립해 보고 있습니다.</p><p>Dock 7은 그렇게 조립한 것들이 모인 곳입니다. 달을 도는 정거장, 아무도 찾으러 오지 않은 배, 밤에 켜 두는 라디오, 그리고 누군가 두고 간 물건들이요.</p></div>
+      <span class="next" aria-hidden="true"></span>
+    </div>
   </section>
 
   <section id="contact">
     <div class="head"><h2>연락</h2></div>
     <div class="card mailcard">
       <a class="mail" href="mailto:nangmanindie@gmail.com">nangmanindie@gmail.com</a>
+      <button class="copy mailcopy" type="button" data-copy="nangmanindie@gmail.com">복사</button>
       <p class="muted">기자, 방송인, 궁금한 것이 있는 분 누구든 메일 주세요.</p>
       <div class="sl"><a href="https://store.steampowered.com/app/5425000/Dock_7/">Steam</a><a href="https://x.com/NangManGames">X</a><a href="https://www.youtube.com/@NangManGames">YouTube</a><a href="https://www.tiktok.com/@nangmangames">TikTok</a></div>
     </div>
@@ -79,6 +90,8 @@
 <footer>
   <p>© 2026 NangmanGames (낭만게임즈)</p>
 </footer>
+<script>window.NG = {"wish": "별똥별을 잡았다! 소원은 여기에:", "wishGo": "Dock 7 위시리스트에 담기", "wishUrl": "https://store.steampowered.com/app/5425000/Dock_7/?utm_source=nangmangames&utm_content=ko&utm_campaign=star", "laser": "레이저 켬 · Esc로 끄기", "scrap": "고철", "away": "해가 졌어요…", "cat": {"Sit": 0, "Blink": 1, "Tail": 2, "WalkA": 3, "WalkB": 4, "ScratchA": 5, "ScratchB": 6, "EatA": 7, "EatB": 8, "Sleep": 9, "Climb": 10, "Groom": 11, "Yawn": 12, "Loaf": 13, "Belly": 14}, "copied": "복사함!", "cont": "계속할까요?", "top": "맨 위로", "thanks": "놀아 줘서 고마워요."};</script>
+<script src="../assets/home.js" defer></script>
 <script>
 // 움직임 줄이기를 켠 사람에게는 영상을 멈춘 첫 장면으로
 if (matchMedia("(prefers-reduced-motion: reduce)").matches)

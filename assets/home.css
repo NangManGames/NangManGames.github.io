@@ -1,19 +1,39 @@
 /* NangmanGames 첫 화면. 프레스 킷의 site.css 위에 얹는다. */
+.langs { display: flex; gap: 6px }
 .studio-hero { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
-  min-height: min(64vh, 560px); padding: 64px 16px 40px;
+  min-height: min(50vh, 460px); padding: 48px 16px 32px;
   background: radial-gradient(ellipse at 50% 70%, #1d2440 0%, var(--bg) 70%) }
 .studio-hero .slogo { width: min(420px, 72vw); height: auto; image-rendering: pixelated }
 .studio-hero .lead { margin: 22px 0 0; font: 18px/1.6 var(--px); color: var(--soft) }
+.studio-hero.lost { min-height: 100vh; gap: 4px }
+.studio-hero.lost .slogo { width: min(280px, 60vw) }
+.studio-hero.lost a { color: var(--orange) }
 
 .game { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 32px; align-items: center;
   background: var(--card); border: 1px solid var(--line); padding: 18px; margin-bottom: 20px }
-.game .cover img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; image-rendering: pixelated; border: 1px solid var(--line) }
+.game .cover img, .game .cover video { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; image-rendering: pixelated;
+  border: 1px solid var(--line); background: var(--bg) }
 .game .glogo { width: min(320px, 100%); height: auto; image-rendering: pixelated; margin-bottom: 8px }
 .game h3 { font-size: 22px; margin: 0 0 6px }
 .game .tag { font: 13px var(--px); color: var(--orange); margin: 0 0 12px }
 .game.small { grid-template-columns: minmax(0, 260px) minmax(0, 1fr) }
 .game.small .cover img { image-rendering: auto }
 .btns.left { justify-content: flex-start; margin: 16px 0 0 }
-@media (max-width: 760px) { .game, .game.small { grid-template-columns: minmax(0, 1fr); gap: 14px } }
+@media (max-width: 760px) {
+  .langs { margin-left: auto }
+  .langs .lang { margin-left: 0; padding: 3px 8px }
+  .game, .game.small { grid-template-columns: minmax(0, 1fr); gap: 14px }
+  /* 휴대폰 첫 화면에 Dock 7 영상과 위시리스트 버튼까지 들어오게 스튜디오 칸을 줄인다 */
+  .studio-hero:not(.lost) { min-height: 0; padding: 26px 16px 22px }
+  .studio-hero:not(.lost) .slogo { width: min(200px, 52vw) }
+  .studio-hero:not(.lost) .lead { margin-top: 12px; font-size: 14px }
+  #games { padding-top: 12px }
+  #games .head { margin-bottom: 12px }
+  .game { padding: 12px }
+  .game .glogo { width: min(200px, 60%); margin-bottom: 4px }
+  .game .big { font-size: 16px; line-height: 1.55; margin: 0 0 8px }
+  .game .tag { margin-bottom: 0 }
+  .btns.left { margin-top: 12px }
+}
 #studio .dev { max-width: 720px }
 .mailcard .sl { flex-basis: 100%; border: 0; margin: 0; padding: 0 }
